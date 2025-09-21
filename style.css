@@ -1,0 +1,66 @@
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Arial',sans-serif; background:#f7f7f7; line-height:1.6; }
+
+/* Header */
+header { background:#1c1c1c; color:#fff; padding:15px 30px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; box-shadow:0 4px 6px rgba(0,0,0,0.2);}
+header h1 { color:#f4d03f;}
+nav a { color:#fff; text-decoration:none; margin:0 12px; font-weight:bold; transition:0.3s;}
+nav a:hover { color:#f4d03f;}
+
+/* Hero */
+.hero { height:80vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:url('https://images.pexels.com/photos/635279/pexels-photo-635279.jpeg?cs=srgb&dl=pexels-bella-white-201200-635279.jpg&fm=jpg') no-repeat center/cover;}
+.hero h2 { font-size:3rem; color:#fff; text-shadow:2px 2px 8px rgba(0,0,0,0.8); margin-bottom:20px;}
+.hero-btn { padding:15px 30px; background:#f4d03f; color:#1c1c1c; text-decoration:none; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.3); transition:all 0.3s ease;}
+.hero-btn:hover { background:#d4ac0d; transform:scale(1.05); }
+
+/* Destinations */
+.destinations { padding:60px 20px; text-align:center; background:#fff;}
+.destinations h2 { font-size:2.5rem; margin-bottom:40px; color:#1c1c1c;}
+.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:25px;}
+.card { border-radius:15px; overflow:hidden; box-shadow:0 8px 15px rgba(0,0,0,0.2); background:#fff; transition: transform 0.3s, box-shadow 0.3s; position:relative;}
+.card:hover { transform:translateY(-10px); box-shadow:0 12px 25px rgba(0,0,0,0.3);}
+.card img { width:100%; height:200px; object-fit:cover; transition:transform 0.3s;}
+.card:hover img { transform:scale(1.1);}
+.card h3 { margin:15px 0 10px 0; color:#1c1c1c;}
+.card p { padding:0 15px; font-size:0.95rem; color:#555;}
+.card button { margin:10px 15px 15px 15px; padding:10px 18px; border-radius:8px; cursor:pointer; font-weight:bold; transition:0.3s;}
+.toggle-desc { background:#1c1c1c; color:#f4d03f;}
+.toggle-desc:hover { background:#f4d03f; color:#1c1c1c;}
+.read-more { background:#f4d03f; color:#1c1c1c;}
+.read-more:hover { background:#d4ac0d;}
+
+/* About */
+.about { padding:60px 20px; background:#f4f4f4; text-align:center;}
+.about h2 { font-size:2.5rem; margin-bottom:20px; color:#1c1c1c;}
+.about p { max-width:700px; margin:auto; color:#555; margin-bottom:40px;}
+.about-cards { display:flex; flex-wrap:wrap; justify-content:center; gap:25px;}
+.about-card { background:#fff; padding:20px; border-radius:15px; box-shadow:0 8px 15px rgba(0,0,0,0.2); width:250px; transition:transform 0.3s;}
+.about-card:hover { transform:translateY(-10px);}
+.about-card img { width:80px; margin-bottom:15px;}
+.about-card h3 { margin-bottom:10px; color:#1c1c1c;}
+.about-card p { font-size:0.9rem; color:#555;}
+
+/* Contact */
+.contact { padding:60px 20px; text-align:center; background:#fff;}
+.contact h2 { font-size:2.5rem; margin-bottom:20px;}
+.contact p { margin-bottom:30px; color:#555;}
+form { display:flex; flex-direction:column; align-items:center; gap:15px;}
+form input, form textarea { width:100%; max-width:400px; padding:10px; border-radius:8px; border:1px solid #ccc;}
+form button { padding:10px 20px; border:none; border-radius:8px; background:#f4d03f; color:#1c1c1c; cursor:pointer; font-weight:bold; transition:0.3s;}
+form button:hover { background:#d4ac0d; }
+
+/* Footer */
+footer { background:#1c1c1c; color:#fff; text-align:center; padding:20px;}
+footer a { color:#f4d03f; text-decoration:none; margin-left:5px;}
+
+/* Modal */
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:9999;}
+.modal.show { display:flex;}
+.modal-content { background:#fff; padding:30px; border-radius:15px; max-width:500px; text-align:center; position:relative;}
+.modal-content h3 { margin-bottom:15px; color:#1c1c1c;}
+.modal-content p { color:#555;}
+.modal-content .close { position:absolute; top:15px; right:15px; font-size:1.5rem; cursor:pointer; color:#333; }
+
+/* Responsive */
+@media(max-width:768px){.cards{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}.about-cards{flex-direction:column;align-items:center;}.hero h2{font-size:2rem;}}
